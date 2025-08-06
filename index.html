@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <video controls class="videos" id="myvideo">
+             <source class="videos_style" src="./video/Clipchamp_1754434328530.mp4" type="video/mp4" />
+             </video>
+        </section>
+    </main>
+
+</body>
+</html>
+    <script type="text/javascript">
+
+var myVideo = document.getElementById('myvideo');
+if (typeof(myVideo.webkitEnterFullscreen) != "undefined") {
+    // This is for Android Stock.
+    myVideo.webkitEnterFullscreen();
+} else if (typeof(myVideo.webkitRequestFullscreen)  != "undefined") {
+    // This is for Chrome.
+    myVideo.webkitRequestFullscreen();
+} else if (typeof(myVideo.mozRequestFullScreen)  != "undefined") {
+    myVideo.mozRequestFullScreen();
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('body').css({
+        "-webkit-transform": "rotate(90deg)"
+    }); 
+}
+
+</script>
